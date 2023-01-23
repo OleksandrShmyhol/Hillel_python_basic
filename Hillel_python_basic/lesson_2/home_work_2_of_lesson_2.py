@@ -1,0 +1,5 @@
+user_number = float(input("Введіть чотиризначне число:"))
+print(int(user_number) // 1000)
+print(int(user_number) // 100 % 10)
+print(int(user_number) // 10 % 10)
+print(int(user_number) % 10)
