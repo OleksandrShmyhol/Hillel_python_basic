@@ -1,7 +1,8 @@
 user_number = int(input("Введіть 5-ти значне число:"))
-first_number = user_number % 10
-second_number = user_number // 10 % 10
+five_number = user_number % 10
+four_number = user_number // 10 % 10
 third_number = user_number // 100 % 10
-four_number = user_number // 1000 % 10
-five_number = user_number // 10000
-print(first_number, second_number, third_number, four_number, five_number)
+second_number = user_number // 1000 % 10
+first_number = user_number // 10000
+result = five_number * 10000 + four_number * 1000 + third_number * 100 + second_number * 10 + first_number * 1
+print(result)
