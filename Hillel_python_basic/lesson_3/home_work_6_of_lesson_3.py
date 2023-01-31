@@ -3,11 +3,11 @@
 # [] => []
 # [12, 3, 4, 10, 8] => [8, 12, 3, 4, 10]
 
-lst = [0]
+lst = [12, 3, 4, 10, 8]
 
 if len(lst) < 2:
     print(lst)
 else:
-    last_element = lst.pop(-1)
+    last_element = lst.pop()
     lst.insert(0, last_element)
     print(lst)

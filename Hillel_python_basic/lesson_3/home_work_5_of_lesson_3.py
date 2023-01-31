@@ -4,7 +4,7 @@
 # [1] => [[1], []]
 # [] => [[], []]
 
-lst = []
+lst = [1, 2, 3, 4, 5]
 first_list = []
 second_list = []
 if not len(lst):
@@ -15,7 +15,7 @@ elif not len(lst) % 2:
     print([first_list, second_list])
 elif len(lst) > 1:
     first_list = lst[:int(len(lst) / 2) + 1]
-    second_list = lst[int(len(lst) / 2) * -1:]
+    second_list = lst[int(len(lst) / 2) + 1:]
     print([first_list, second_list])
 else:
     first_list += lst
