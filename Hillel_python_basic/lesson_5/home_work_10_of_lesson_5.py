@@ -1,13 +1,14 @@
 import string
+import keyword
 
 my_string = input()
-result = 1
-if my_string[0].isdigit() or any(el.isupper() for el in my_string) or ' ' in my_string:
-    result *= 0
+result = True
+if my_string[0].isdigit() or any(el.isupper() for el in my_string) or ' ' in my_string or keyword.iskeyword(my_string):
+    result = False
 elif any(el in string.punctuation for el in my_string):
     if '_' in my_string:
-        result *= 1
+        result = True
     else:
-        result *= 0
+        result = False
 
-print(bool(result))
+print(result)
