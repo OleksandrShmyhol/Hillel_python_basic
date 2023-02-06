@@ -13,4 +13,4 @@ for el in range(len(user_input)):
 
 result = ''.join(user_input)
 print("#" + result[:140].title().replace(' ',
-      '').replace(string.punctuation, ''))
+      ''))
