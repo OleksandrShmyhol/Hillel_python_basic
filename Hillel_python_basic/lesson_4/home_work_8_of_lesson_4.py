@@ -4,13 +4,12 @@
 # [6] => 36
 # [] => 0
 
-lst = [0, 1, 7, 2, 4, 8]
-
+lst = [0]
 result = 0
-i = 0
-while i < len(lst):
-    if not i % 2:
-        result += lst[i] * lst[len(lst) - 1]
-    i += 1
-
-print(result)
+if len(lst):
+    for el in range(len(lst)):
+        if not el % 2:
+            result += lst[el]
+    print(result * lst[-1])
+else:
+    print(0)

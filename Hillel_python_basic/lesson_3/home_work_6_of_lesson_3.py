@@ -3,9 +3,9 @@
 # [] => []
 # [12, 3, 4, 10, 8] => [8, 12, 3, 4, 10]
 
-lst = [12, 3, 4, 10, 8]
+lst = [1]
 
-if len(lst) < 2:
+if len(lst) < 1:
     print(lst)
 else:
     last_element = lst.pop()
