@@ -1,17 +1,8 @@
 def find_unique_value(lst):
-    num = 0
     for el in lst:
-        count = 0
-        for i in lst:
-            if i == el:
-                count += 1
-            if count > 1:
-                count = 0
-                break
+        count = lst.count(el)
         if count == 1:
-            num = el
-            break
-    return num
+            return el
 
 
 assert find_unique_value([1, 2, 1, 1]) == 2, 'Test1'
