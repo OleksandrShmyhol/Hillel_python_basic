@@ -1,7 +1,7 @@
 def difference(*args):
-    if not [*args]:
-        return 0
-    return round(max(*args) - min(*args), 2)
+    # if not [*args]:
+    #     return 0
+    return round(max(*args) - min(*args), 2) * bool([*args]) or 0
 
 
 assert difference(1, 2, 3) == 2, 'Test1'
