@@ -22,12 +22,16 @@ class Student(Human):
 
 class Group:
 
-    def __init__(self, number):
+    def __init__(self, number, group_size: int = 10):
         self.number = number
         self.group = set()
+        self.group_size = group_size
 
     def add_student(self, student):
-        self.group.add(student)
+        if len(self.group) > self.group_size:
+            raise ValueError('Maximum size')
+        else:
+            self.group.add(student)
 
     def delete_student(self, last_name):
         res = self.find_student(last_name)
@@ -57,3 +61,15 @@ assert gr.find_student('Jobs2') is None, 'Test2'
 
 gr.delete_student('Taylor')
 print(gr) # Only one student
+
+k = []
+for i in range(11):
+    str(i)
+    i = Student('Male', 30, 'Steve', 'Jobs', f'AN14{i}')
+    k.append(i)
+
+for i in k:
+    try:
+        gr.add_student(i)
+    except ValueError:
+        print("Maximum size")

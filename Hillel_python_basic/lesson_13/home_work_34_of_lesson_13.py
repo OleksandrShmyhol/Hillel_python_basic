@@ -48,7 +48,7 @@ counter.step_down()
 counter.step_down()
 assert counter.get_current() == 7
 try:
-    counter.step_down()  # ValueError
+    counter.step_down()# ValueError
 except ValueError as e:
     print(e) # Достигнут минимум
 assert counter.get_current() == 7
